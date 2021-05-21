@@ -23,7 +23,7 @@ pipeline {
     }
   stage('Docker Run') {
       steps {
-         sh 'nohup /usr/bin/docker run -t --name tomcat-container -p 8080:8080 tomcat &'
+         sh 'nohup /usr/bin/docker run -t --name tomcat-container -p 8080:8009 tomcat &'
       }
     } 
   }
