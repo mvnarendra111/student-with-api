@@ -18,12 +18,12 @@ pipeline {
     }
     stage('Docker Build') {
       steps {
-        sh '/usr/bin/docker build -t tomcat .'
+        sh '/usr/bin/docker build -t naren .'
       }
     }
   stage('Docker Run') {
       steps {
-         sh 'nohup /usr/bin/docker run -t --name tomcat-container -p 8009:8080 tomcat &'
+         sh 'nohup /usr/bin/docker run -t --name tomcat-container -p 8009:8080 naren &'
       }
     } 
   }
